@@ -1,5 +1,13 @@
 package marom.ron.contextlabs.conditions;
 
-public class NotEqualCondition {
+import marom.ron.contextlabs.attributes.AttributeValue;
 
+public class NotEqualCondition extends Condition{
+
+	@Override
+	public boolean isMet(AttributeValue otherAttributeValue) {
+		return otherAttributeValue.getValue().compareTo(attributeValue)!=0;
+	}
+
+	
 }
