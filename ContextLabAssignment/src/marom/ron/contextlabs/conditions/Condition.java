@@ -6,4 +6,10 @@ public abstract class Condition {
 	protected AttributeValue attributeValue;
 	
 	public abstract boolean isMet(AttributeValue otherAttributeValue);
+
+	public AttributeValue getAttributeValue() {
+		return attributeValue;
+	}
+
+	
 }
