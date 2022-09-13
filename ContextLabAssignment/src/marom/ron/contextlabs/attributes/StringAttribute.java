@@ -2,6 +2,13 @@ package marom.ron.contextlabs.attributes;
 
 public class StringAttribute extends AttributeValue{
 	String value;
+	
+	
+
+	public StringAttribute(String name, String value) {
+		super(name);
+		this.value = value;
+	}
 
 	@Override
 	public Comparable<Object> getValue() {
@@ -9,8 +16,11 @@ public class StringAttribute extends AttributeValue{
 
 			@Override
 			public int compareTo(Object o) {
-				return value.compareTo((String)o);
+				String otherValue = ((StringAttribute)o).value;
+				return value.compareTo(otherValue);
 			}};
 	}
+	
+	
 
 }

@@ -9,5 +9,7 @@ public class EqualCondition extends Condition{
 		return otherAttributeValue.getValue().compareTo(attributeValue)==0;
 	}
 
-	
+	public EqualCondition(AttributeValue attributeValue) {
+		super(attributeValue);
+	}
 }
